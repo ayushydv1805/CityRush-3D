@@ -22,8 +22,8 @@ app.get("/", (_, res) => res.json({
 
 app.get("/health", (_, res) => res.json({
   ok: true,
-  phase: 4,
-  version: "0.4.0",
+  phase: 6,
+  version: "0.6.0",
   city: "Chandigarh",
   vehicleSystem: "online",
   trafficSystem: "online",
@@ -42,10 +42,11 @@ const io = new Server(httpServer, {
 io.on("connection", (socket) => {
   socket.emit("server:ready", {
     id: socket.id,
-    version: "0.5.0",
-    phase: 5,
+    version: "0.6.0",
+    phase: 6,
     city: "Chandigarh",
     vehicleSystem: "online",
+    missionSystem: "online",
   });
 });
 
