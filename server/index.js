@@ -14,10 +14,10 @@ app.use(express.json());
 app.get("/", (_, res) => res.json({
   name: "CityRush 3D Server",
   status: "online",
-  version: "0.5.0",
-  phase: 5,
+  version: "0.6.0",
+  phase: 6,
   city: "Chandigarh",
-  systems: ["city", "player", "vehicle", "traffic", "pedestrians"],
+  systems: ["city", "player", "vehicle", "traffic", "pedestrians", "missions"],
 }));
 
 app.get("/health", (_, res) => res.json({
@@ -28,6 +28,7 @@ app.get("/health", (_, res) => res.json({
   vehicleSystem: "online",
   trafficSystem: "online",
   pedestrianSystem: "online",
+  missionSystem: "online",
   timestamp: new Date().toISOString(),
 }));
 
